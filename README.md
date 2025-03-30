@@ -1,73 +1,36 @@
-# Actividad Evaluativa Individual: Desarrollo de Aplicaciones Móviles en Android Studio
+# AppMovil - Mercado de Software
 
-## Instrucciones
-Desarrolle una aplicación móvil en **Android Studio** donde pueda aplicar los siguientes conceptos:
+## Descripción
+**AppMovil - Mercado de Software** es una aplicación móvil diseñada para explorar y gestionar software en un mercado digital. La app permite a los usuarios navegar entre diferentes pantallas, ver detalles de productos y personalizar la interfaz según sus preferencias.
 
-- Diseño de pantallas con **XML Layout** y **Jetpack Compose**
-- Navegación entre pantallas con **Navigation Component**
-- Manejo de estados con **LiveData** y **ViewModel**
-- Publicación del código en **GitHub**
+## Características principales
+- **Pantalla de inicio** con botón de navegación a la pantalla de detalles.
+- **Uso de Jetpack Compose** para una interfaz moderna y eficiente.
+- **Gestión de estado** mediante ViewModel y LiveData.
+- **Configuración de usuario** para cambiar el color de fondo de la aplicación.
+- **Persistencia de datos** con SharedPreferences para guardar preferencias del usuario.
 
-**Tiempo estimado:** 3 días
+## Instalación y Ejecución
+Sigue estos pasos para instalar y ejecutar la aplicación en Android Studio:
 
-**Entrega:** Suba el código a un repositorio en **GitHub** y comparta el enlace a diegof.loaizab@unilibre.edu.co
+### 1. Clonar el repositorio
+Abre la terminal y ejecuta el siguiente comando:
+```sh
+ git clone https://github.com/Yulder12/AppMovil.git
+ cd AppMovil
+```
 
----
+### 2. Abrir en Android Studio
+1. Abre **Android Studio**.
+2. Selecciona **"Open an Existing Project"**.
+3. Busca la carpeta clonada y ábrela.
 
-## Requerimientos de la actividad Proyecto
+### 3. Configurar el entorno
+- Asegúrate de tener el **SDK de Android (API 30 o superior)** instalado.
+- Instala cualquier dependencia faltante desde **File > Sync Project with Gradle Files**.
 
-### 1️. **Pantallas y Navegación**
-- La aplicación debe tener **tres pantallas**:
-  1. **Pantalla de inicio** con un botón para navegar a la segunda pantalla.
-  2. **Pantalla de detalles**, que muestre información basada en un `ViewModel` y un `LiveData`.
-  3. **Pantalla de configuración** donde el usuario pueda cambiar un valor que afecte la UI global.
-- Implementar la navegación entre estas pantallas usando **Navigation Component**.
+### 4. Ejecutar la app en un emulador o dispositivo físico
+- Conecta un dispositivo con **Depuración USB** activada o inicia un emulador.
+- Haz clic en **Run 📺** en Android Studio.
 
-### 2️. **Diseño de la UI**
-- Utilizar **XML Layout** para la pantalla de inicio y **Jetpack Compose** para la pantalla de detalles.
-- Asegurar que el diseño sea **responsivo y accesible**.
-
-### 3️. **Gestión de Estado**
-- Usar **ViewModel** para gestionar la lógica de la aplicación.
-- Implementar **LiveData** para actualizar la UI en tiempo real.
-
-### 4. **Interactividad y Experiencia de Usuario**
-- Agregar una opción en la **Pantalla de Configuración** para cambiar el color de fondo de la aplicación de manera global.
-- Guardar la preferencia de color usando `SharedPreferences`.
-
-### 5️. **Entrega en GitHub**
-- Subir el código en un repositorio público en **GitHub**.
-- Asegurar que el `README.md` tenga:
-  - Descripción de la app
-  - Capturas de pantalla
-  - Instrucciones de instalación y ejecución
-
----
-
-##  Criterios de Evaluación (5 Puntos)
-| Criterio | Puntos |
-|----------|--------|
-| Implementación de Navigation Component y múltiples pantallas | 1.5 |
-| Uso adecuado de XML Layout y Jetpack Compose | 1.25 |
-| Implementación correcta de ViewModel y LiveData | 1.25 |
-| Organización del código y documentación en GitHub | 1.0 |
-
----
-
-##  Entrega
-- **Fecha límite:** Sábado 29 de Marzo de 2025
-- **Enlace del repositorio:** enviar a email indicado al inicio.
-
----
-
-## Recursos Recomendados
-- [Documentación oficial de Jetpack Compose](https://developer.android.com/jetpack/compose)
-- [Guía de Navigation Component](https://developer.android.com/guide/navigation/navigation-getting-started)
-- [Manejo de ViewModel y LiveData](https://developer.android.com/topic/libraries/architecture/viewmodel)
-- [Uso de SharedPreferences](https://developer.android.com/training/data-storage/shared-preferences)
-- [Repositorio de código del curso] (https://github.com/dfloaizab/MobileAppsDevelopment/tree/main).
-
----
-
-**Nota:** La originalidad y creatividad en la implementación serán altamente valoradas.
-
+# AppMovil
