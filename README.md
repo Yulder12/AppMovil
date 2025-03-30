@@ -10,11 +10,24 @@
 - **Configuración de usuario** para cambiar el color de fondo de la aplicación.
 - **Persistencia de datos** con SharedPreferences para guardar preferencias del usuario.
 
-Pantalla 1: Inicio, presentación de softwares ![WhatsApp Image 2025-03-30 at 4 16 09 AM (2)](https://github.com/user-attachments/assets/d9728d5f-c0dc-4569-b217-ad95d541f2b4)
+Pantalla 1: Inicio, presentación de softwares 
+
+
+![WhatsApp Image 2025-03-30 at 4 16 09 AM (2)](https://github.com/user-attachments/assets/d9728d5f-c0dc-4569-b217-ad95d541f2b4)
+
 
 Pantalla 2: Detalles del software seleccionado
 
+
+![WhatsApp Image 2025-03-30 at 4 16 09 AM (1)](https://github.com/user-attachments/assets/9d41952c-ab6c-4f19-9525-0cd0e0b3632d)
+
+
+
 Pantalla 3: Configuración para cambiar el tema de la aplicación
+
+
+![WhatsApp Image 2025-03-30 at 4 16 09 AM](https://github.com/user-attachments/assets/adbd609f-4b49-48c2-b170-cc01656270eb)
+
 
 ## Instalación y Ejecución
 Sigue estos pasos para instalar y ejecutar la aplicación en Android Studio:
