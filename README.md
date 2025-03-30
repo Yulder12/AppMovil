@@ -32,5 +32,3 @@ Abre la terminal y ejecuta el siguiente comando:
 ### 4. Ejecutar la app en un emulador o dispositivo físico
 - Conecta un dispositivo con **Depuración USB** activada o inicia un emulador.
 - Haz clic en **Run 📺** en Android Studio.
-
-# AppMovil
