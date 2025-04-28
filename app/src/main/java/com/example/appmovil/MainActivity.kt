@@ -2,14 +2,12 @@ package com.example.appmovil
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.appmovil.databinding.ActivityMainBinding
 import com.example.appmovil.util.ThemeManager
-import com.example.appmovil.viewmodel.MainViewModel
 import com.example.appmovil.viewmodel.MarketplaceViewModel
 
 class MainActivity : AppCompatActivity() {
