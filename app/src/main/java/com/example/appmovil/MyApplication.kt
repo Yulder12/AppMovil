@@ -11,5 +11,7 @@ class MyApplication : Application() {
         super.onCreate()
         // Inicializar ThemeManager
         themeManager = ThemeManager.getInstance(this)
+
+
     }
 }

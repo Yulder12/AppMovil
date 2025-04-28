@@ -98,7 +98,7 @@ fun SoftwareDetails(software: SoftwareProduct) {
         Row(
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // Usando estrellas numéricas en lugar de RatingBar nativo
+            // Usando estrellas numéricas
             Text(
                 text = "★".repeat(software.rating.toInt()) + "☆".repeat(5 - software.rating.toInt()),
                 fontSize = 18.sp,
@@ -160,21 +160,5 @@ fun SoftwareDetails(software: SoftwareProduct) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        Text(
-            text = "Requisitos del sistema",
-            fontSize = 18.sp,
-            fontWeight = FontWeight.Bold
-        )
-
-        Spacer(modifier = Modifier.height(8.dp))
-
-        Text(
-            text = "• Sistema operativo: Windows 10/11, macOS 12+, Linux\n" +
-                    "• Procesador: Intel Core i5 o equivalente\n" +
-                    "• RAM: 8GB mínimo\n" +
-                    "• Espacio en disco: 2GB\n" +
-                    "• Conexión a Internet para activación",
-            fontSize = 14.sp
-        )
     }
 }

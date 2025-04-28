@@ -48,19 +48,14 @@ class MainActivity : AppCompatActivity() {
 
         // Observar cambios en el modo de tema
         themeManager.themeMode.observe(this) { themeMode ->
-            // Aquí se podrían aplicar otros cambios al tema global
             when (themeMode) {
                 ThemeManager.ThemeMode.DARK -> {
-                    // Aplicar cambios adicionales para tema oscuro
                 }
                 ThemeManager.ThemeMode.LIGHT -> {
-                    // Aplicar cambios adicionales para tema claro
                 }
                 ThemeManager.ThemeMode.BLUE -> {
-                    // Aplicar cambios adicionales para tema azul
                 }
                 ThemeManager.ThemeMode.GREEN -> {
-                    // Aplicar cambios adicionales para tema verde
                 }
             }
         }

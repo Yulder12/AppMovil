@@ -9,9 +9,9 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.appmovil.databinding.FragmentHomeBinding
-import com.example.appmovil.data.SoftwareProduct
 import com.example.appmovil.databinding.ItemSoftwareBinding
 import com.example.appmovil.viewmodel.MarketplaceViewModel
+import com.example.appmovil.data.SoftwareProduct
 
 class HomeFragment : Fragment() {
 
@@ -22,8 +22,7 @@ class HomeFragment : Fragment() {
     private lateinit var softwareAdapter: SoftwareAdapter
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
@@ -36,10 +35,17 @@ class HomeFragment : Fragment() {
         setupRecyclerView()
         setupObservers()
 
-        // Configurar el botón para navegar a la pantalla de configuración
+        // Navegación hacia la pantalla de configuración
         binding.btnGoToSettings.setOnClickListener {
             findNavController().navigate(
                 HomeFragmentDirections.actionHomeFragmentToSettingsFragment()
+            )
+        }
+
+        // Navegación hacia la pantalla de agregar software
+        binding.btnAddSoftware.setOnClickListener {
+            findNavController().navigate(
+                HomeFragmentDirections.actionHomeFragmentToAddSoftwareFragment()
             )
         }
     }
@@ -70,7 +76,7 @@ class HomeFragment : Fragment() {
     }
 }
 
-// Adapter para la lista de software
+
 class SoftwareAdapter(private val onItemClick: (Int) -> Unit) :
     androidx.recyclerview.widget.ListAdapter<SoftwareProduct, SoftwareAdapter.SoftwareViewHolder>(
         object : androidx.recyclerview.widget.DiffUtil.ItemCallback<SoftwareProduct>() {
@@ -100,21 +106,16 @@ class SoftwareAdapter(private val onItemClick: (Int) -> Unit) :
     inner class SoftwareViewHolder(private val binding: ItemSoftwareBinding) :
         androidx.recyclerview.widget.RecyclerView.ViewHolder(binding.root) {
 
-        init {
-            binding.root.setOnClickListener {
-                val bindingAdapterPosition = 0
-                val position = bindingAdapterPosition
-                if (position != androidx.recyclerview.widget.RecyclerView.NO_POSITION) {
-                    onItemClick(getItem(position).id)
-                }
-            }
-        }
-
         fun bind(software: SoftwareProduct) {
             binding.textViewSoftwareName.text = software.name
             binding.textViewDeveloper.text = software.developer
             binding.textViewPrice.text = "$${software.price}"
             binding.ratingBar.rating = software.rating
+
+            binding.root.setOnClickListener {
+                onItemClick(software.id)
+            }
         }
     }
 }
+
