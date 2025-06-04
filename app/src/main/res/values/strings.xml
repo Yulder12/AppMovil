@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">appMovil</string>
+    <string-array name="color_options">
+        <item>Gris oscuro</item>
+        <item>Azul marino</item>
+        <item>Verde oscuro</item>
+        <item>Morado</item>
+    </string-array>
+</resources>
