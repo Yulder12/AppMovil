@@ -3,6 +3,7 @@ package com.example.appmovil.ui.settings
 import android.content.Context
 import android.os.Bundle
 import android.view.*
+import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.appmovil.R
@@ -29,18 +30,26 @@ class SettingsFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        // Cargar nombres en el Spinner
+        val colorNames = colorMap.keys.toList()
+        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, colorNames)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.spinnerColors.adapter = adapter
+
+        // Navegar a editar perfil
+        binding.btnEditProfile.setOnClickListener {
+            findNavController().navigate(SettingsFragmentDirections.actionSettingsFragmentToEditProfileFragment())
+        }
+
+        // Aplicar el color seleccionado
         binding.btnApplyColor.setOnClickListener {
             val selectedName = binding.spinnerColors.selectedItem.toString()
-            val colorResId = colorMap[selectedName] ?: R.color.white
+            val colorResId = colorMap[selectedName] ?: R.color.theme_dark_gray
 
             val prefs = requireContext().getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
             prefs.edit().putInt("backgroundColor", colorResId).apply()
 
-            requireActivity().recreate() // Recarga la actividad para aplicar color
-        }
-
-        binding.btnEditProfile.setOnClickListener {
-            findNavController().navigate(SettingsFragmentDirections.actionSettingsFragmentToEditProfileFragment())
+            requireActivity().recreate()
         }
     }
 

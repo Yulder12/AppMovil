@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="32dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="600dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tvSettingsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Configuración"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="32dp" />
+
+        <Button
+            android:id="@+id/btnEditProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Editar Perfil"
+            android:layout_marginBottom="32dp" />
+
+        <TextView
+            android:id="@+id/tvColorTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tema de la aplicación:"
+            android:textSize="18sp"
+            android:layout_marginBottom="12dp" />
+
+        <Spinner
+            android:id="@+id/spinnerColors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btnApplyColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aplicar Color" />
+
+    </LinearLayout>
+</ScrollView>
+

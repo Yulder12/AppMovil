@@ -1,58 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
     <LinearLayout
+        android:padding="16dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/editTextName"
+            android:id="@+id/etNombre"
+            android:hint="Nombre"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Nombre del Software"/>
+            android:layout_height="wrap_content" />
 
         <EditText
-            android:id="@+id/editTextDescription"
+            android:id="@+id/etDescripcion"
+            android:hint="Descripción"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Descripción"/>
+            android:layout_height="wrap_content" />
 
         <EditText
-            android:id="@+id/editTextPrice"
+            android:id="@+id/etAutor"
+            android:hint="Autor"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Precio"
-            android:inputType="numberDecimal"/>
+            android:layout_height="wrap_content" />
 
         <EditText
-            android:id="@+id/editTextDeveloper"
+            android:id="@+id/etVersion"
+            android:hint="Versión"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Desarrollador"/>
+            android:layout_height="wrap_content" />
 
         <EditText
-            android:id="@+id/editTextRating"
+            android:id="@+id/etLink"
+            android:hint="Link de contacto"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Calificación (1-5)"
-            android:inputType="numberDecimal"/>
-
-        <EditText
-            android:id="@+id/editTextDownloads"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Descargas"
-            android:inputType="number"/>
+            android:layout_height="wrap_content" />
 
         <Button
-            android:id="@+id/btnSaveSoftware"
+            android:id="@+id/btnGuardar"
+            android:text="Guardar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Guardar Software"/>
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 </ScrollView>
+

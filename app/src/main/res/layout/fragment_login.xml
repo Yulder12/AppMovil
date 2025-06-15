@@ -1,38 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="24dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="vertical" android:padding="16dp"
-        android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView
+    android:text="AppMovil - Mercado de Software"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    android:layout_marginBottom="40dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
 
-        <!-- Autenticación -->
-        <EditText android:id="@+id/emailInput" android:hint="Correo electrónico"
-            android:inputType="textEmailAddress"
-            android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/etEmail"
+        android:hint="Correo electrónico"
+        android:inputType="textEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
-        <EditText android:id="@+id/passwordInput" android:hint="Contraseña"
-            android:inputType="textPassword"
-            android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/etPassword"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"/>
 
-        <Button android:id="@+id/btnLogin" android:text="Iniciar sesión / Registrar"
-            android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnLogin"
+        android:text="Iniciar Sesión"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"/>
 
-        <!-- Formulario de datos -->
-        <EditText android:id="@+id/inputName" android:hint="Nombre"
-            android:layout_width="match_parent" android:layout_height="wrap_content" />
-
-        <EditText android:id="@+id/inputAge" android:hint="Edad" android:inputType="number"
-            android:layout_width="match_parent" android:layout_height="wrap_content" />
-
-        <EditText android:id="@+id/inputCity" android:hint="Ciudad"
-            android:layout_width="match_parent" android:layout_height="wrap_content" />
-
-        <Button android:id="@+id/btnSave" android:text="Guardar en Firestore"
-            android:layout_width="match_parent" android:layout_height="wrap_content" />
-
-        <TextView android:id="@+id/outputText" android:text="Resultados..."
-            android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:paddingTop="16dp" />
-    </LinearLayout>
-</ScrollView>
+    <Button
+        android:id="@+id/btnGoToRegister"
+        android:text="¿No tienes cuenta? Regístrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"/>
+</LinearLayout>

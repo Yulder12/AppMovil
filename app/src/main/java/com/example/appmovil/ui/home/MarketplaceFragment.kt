@@ -57,8 +57,8 @@ class MarketplaceFragment : Fragment() {
         viewModel.loadSoftwares()
 
         // Acción del botón flotante para abrir el chatbot
-        binding.fabChatbot.setOnClickListener {
-            findNavController().navigate(R.id.chatbotFragment)
+        binding.fabChat?.setOnClickListener {
+            findNavController().navigate(R.id.chatFragment)
         }
     }
 

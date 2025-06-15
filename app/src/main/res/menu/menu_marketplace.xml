@@ -17,5 +17,10 @@
         android:title="Configuración"
         android:icon="@android:drawable/ic_menu_preferences"
         app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/chatFragment"
+        android:icon="@drawable/ic_bot"
+        android:title="Chat IA" />
 </menu>
 

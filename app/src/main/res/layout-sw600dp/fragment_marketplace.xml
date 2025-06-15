@@ -2,23 +2,22 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="80dp" />
+        android:paddingBottom="96dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabChat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/fabChatbot"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
         android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:src="@drawable/ic_bot"
-        android:contentDescription="Abrir chat IA"
-        app:tint="@android:color/white" />
+        android:layout_margin="32dp"
+        android:contentDescription="Abrir chatbot"
+        app:srcCompat="@drawable/ic_menu_gallery" />
 </FrameLayout>
-
 

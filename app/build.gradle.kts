@@ -99,5 +99,18 @@ dependencies {
     implementation ("com.google.firebase:firebase-storage-ktx")
     implementation(libs.okhttp)
 
+    // ViewModel y LiveData (si no las tienes ya)
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+
+    // Fragment KTX (si no lo tienes ya)
+    implementation ("androidx.fragment:fragment-ktx:1.6.2")
+
+    // RecyclerView (si no lo tienes ya)
+    implementation ("androidx.recyclerview:recyclerview:1.3.2")
+
+    // Para manejar JSON (si no lo tienes ya)
+    implementation ("org.json:json:20230227")
+
 }
 

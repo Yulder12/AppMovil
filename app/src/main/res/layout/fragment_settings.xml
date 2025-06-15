@@ -1,106 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="24dp">
 
-    <TextView
-        android:id="@+id/textViewSettingsTitle"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Configuración"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:gravity="center_horizontal">
 
-    <TextView
-        android:id="@+id/textViewThemeTitle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Tema de la aplicación"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewSettingsTitle" />
+        <TextView
+            android:id="@+id/tvSettingsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Configuración"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
 
-    <Button
-        android:id="@+id/btnThemeLight"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Claro"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/btnThemeDark"
-        app:layout_constraintTop_toBottomOf="@id/textViewThemeTitle"
-        app:layout_constraintHorizontal_chainStyle="spread" />
+        <Button
+            android:id="@+id/btnEditProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Editar Perfil"
+            android:layout_marginBottom="32dp" />
 
-    <Button
-        android:id="@+id/btnThemeDark"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Oscuro"
-        android:layout_marginStart="8dp"
-        app:layout_constraintStart_toEndOf="@id/btnThemeLight"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewThemeTitle" />
+        <TextView
+            android:id="@+id/tvColorTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tema de la aplicación:"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
 
-    <Button
-        android:id="@+id/btnThemeBlue"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Azul"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/btnThemeGreen"
-        app:layout_constraintTop_toBottomOf="@id/btnThemeLight"
-        app:layout_constraintHorizontal_chainStyle="spread" />
+        <Spinner
+            android:id="@+id/spinnerColors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" />
 
-    <Button
-        android:id="@+id/btnThemeGreen"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Verde"
-        android:layout_marginStart="8dp"
-        app:layout_constraintStart_toEndOf="@id/btnThemeBlue"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnThemeDark" />
+        <Button
+            android:id="@+id/btnApplyColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aplicar Color" />
 
-    <TextView
-        android:id="@+id/textViewDisplayOptions"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Opciones de visualización"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnThemeBlue" />
+    </LinearLayout>
+</ScrollView>
 
-    <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/switchCompactView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Modo compacto"
-        android:layout_marginTop="8dp"
-        android:checked="false"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewDisplayOptions" />
 
-    <Button
-        android:id="@+id/btnBack"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Volver"
-        android:layout_marginTop="24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
